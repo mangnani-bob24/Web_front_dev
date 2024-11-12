@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #999;
+}
+
+p {
+    margin: .5em 0 .5em 0;
+}
+
+q {  /*워게임 풀러가기*/
+    a{
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: #0d051b;
+    border-radius: 15px;
+    font-size: 1.5em;
+    color: #e9f4fb;
+    outline: none;
+    padding: 10px;}
+    quotes: none; /* 큰따옴표 제거 */
+}
+
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d051b;
+    padding: 30px;
+}
+
+nav a:visited,
+nav a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 80px;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav > ul > li.right {
+    float: right;
+    margin-right: 80px;
+
+}
+
+
+main {
+    display: block;
+    background-color: #fff;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    min-height: 85%;
+    
+}
+
+footer {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 80px;
+}
+
+
+article {
+    padding: 2em;
+    text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+.columns {
+    display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+    aside {
+        margin-left: 2%;
+    }
+    .columns-desktop {
+        display: flex;
+    }
+}
+
+
+/* Pies */
+
+.pie {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+}
+
+.pie img {
+    width: 100%;
+}
+
+.pie .title {
+    font-weight: bold;
+}
+
+.pie .columns {
+    width: 100%;
+}
+
+.pie .price {
+    text-align: right;
+}
+
+.pie .columns div {
+    width: 50%;
+}
+
+.pie button {
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+}
