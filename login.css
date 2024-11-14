@@ -67,7 +67,7 @@ footer {
 }
 
 article {
-    .center{ /*환영합니다*/
+    .center{ 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,7 +76,7 @@ article {
     height: 400px;
     border-radius: 2px;
     }
-    .center h1 { 
+    .center h1 { /*환영합니다*/
     text-align: center;
     padding: 0 0 2 0px 0;
     border-bottom: 20px solid none

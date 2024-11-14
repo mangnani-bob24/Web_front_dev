@@ -22,29 +22,21 @@
     </header>
     <main>
         <aside><img src="images/bob.jpg" alt="bob-logo" style="width: 100px; height: auto;"></aside>
-        <article>
-            <div class = "center">
-                <h1> 회원가입 </h1>
-                <form method="post">
-                
-                <div class="txt_field">
-                <input type="text" required>
-                <span> </span>
-                <label> 아이디 </label>
-                </div>
-                
-                <div class="txt_field">
-                <input type="password" required>
-                <span> </span>
-                <label> 비밀번호 </label>
-                </div>
-                
-                <div class="forgot"> 아이디 or 비밀번호를 잊으셨다면 재가입해주세요  </div>
-                <input type="submit" value="로그인">
-                <div class="users_signup">
-                아직 계정이 없으신가요? <a href="signup.html">회원가입</a>
-                </div>
-        </article>
+        <section class="form-block" id="signUpForm">
+        <h2>회원가입</h2>
+        <form>
+            <label for="user_name">이름</label>
+            <input type="text" id="user_name" />
+  
+            <label for="user_email_signup">이메일</label>
+            <input type="email" id="user_email_signup" />
+
+            <label for="user_password_signup">비밀번호</label>
+            <input type="password" id="user_password_signup" />
+  
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
     </main>
     <footer>
         <nav>
