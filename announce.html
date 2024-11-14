@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 예제</title>
+    <link rel="stylesheet" href="announce.css">
+</head>
+<body>
+    <header> <nav>
+        <ul>
+            <li><a href="introduce.html">팀 소개</a></li>
+            <li><a href="wargame.html">워게임</a></li>
+            <li><a href="announce.html">홍보 및 소식</a></li>
+            <li class="right"><a href="login.html">로그인</a></li>
+        </ul>
+    </nav></header>
+   
+<!-- 검색 상자 -->
+<div class="search_box">
+    <fieldset>
+        <select>
+            <option value="all">전체</option>
+            <option value="title">제목</option>
+            <option value="content">내용</option>
+        </select>
+        <input type="text" placeholder="검색어를 입력하세요">
+        <a href="#">검색</a>
+    </fieldset>
+</div>
+
+<!-- 게시판 목록 -->
+<div class="t_list">
+    <ul>
+        <li>
+            <a href="#">게시글 제목 1</a>
+            <span>2024-11-12</span>
+            <i class="ico_file">파일</i>
+        </li>
+        <li>
+            <a href="#">게시글 제목 2</a>
+            <span>2024-11-11</span>
+        </li>
+        <li>
+            <a href="#">게시글 제목 3</a>
+            <span>2024-11-10</span>
+        </li>
+    </ul>
+</div>
+
+<!-- 페이지네이션 -->
+<div class="paginate">
+    <a class="pre" href="#">  </a>
+    <strong>1</strong>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a class="next" href="#">  </a>
+</div>
+
+<script>
+// 아코디언 기능 구현
+const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03');
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    });
+});
+</script>
+
+</body>
+</html>

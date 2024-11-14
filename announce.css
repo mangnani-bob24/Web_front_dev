@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d051b;
+    padding: 30px;
+}
+
+nav a:visited,
+nav a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 80px;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav > ul > li.right {
+    float: right;
+    margin-right: 80px;
+
+}
+
+/* 검색 상자 */
+.search_box {
+    float: right;
+    margin-top: 100px; 
+    margin-bottom: 14px;
+    position: relative; /* 위치를 명확하게 설정 */
+    z-index: 10; /* 검색 상자가 header보다 위에 표시되도록 설정 */
+}
+.search_box select {
+    width: 125px !important;
+}
+.search_box input {
+    width: 150px;
+}
+.search_box fieldset > a {
+    display: inline-block;
+    width: 75px;
+    height: 35px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background: #606976;
+}
+
+/* 게시판 목록 */
+.t_list {
+    clear: both;
+}
+.t_list > ul {
+    width: 100%;
+    border-top: 2px solid #7b7b7b;
+    line-height: 160%;
+}
+.t_list > ul li {
+    position: relative;
+    padding: 7px 7px 10px;
+    border-bottom: 1px solid #dadada;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+}
+.t_list > ul li a {
+    width: 86%;
+    max-height: 67px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.t_list > ul li span {
+    display: block;
+    margin-bottom: 3px;
+    word-break: keep-all;
+    font-size: 12px;
+    color: #666;
+    line-height: 140%;
+}
+.t_list > ul i {
+    padding-right: 3px;
+    font-style: normal;
+}
+
+/* 페이지네이션 */
+.paginate {
+    overflow: hidden;
+    clear: both;
+    margin: 0 auto;
+    padding: 29px 0 30px;
+    text-align: center;
+}
+.paginate a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none !important;
+    line-height: 38px;
+}
+.paginate a:hover,
+.paginate a:focus,
+.paginate a:active {
+    color: #23a2d1;
+}
+.paginate strong {
+    padding: 0 9px;
+    margin-left: 5px;
+    border: 1px solid #e3e3e3;
+    color: #23a2d1 !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.paginate a.pre {
+    background: url(btn_next.png) no-repeat left top;
+}
+.paginate a.next {
+    background: url(btn_next.png) no-repeat right top;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 890px) {
+    .paginate a {
+        line-height: 30px;
+        padding: 0;
+    }
+    .paginate a.pre,
+    .paginate a.next {
+        width: 32px;
+        height: 32px;
+    }
+    .paginate a span {
+        line-height: 30px;
+    }
+    .paginate strong {
+        padding: 0 4px;
+        margin-left: 0;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .search_box {
+        float: none;
+        display: none;
+    }
+    .t_list > ul li a {
+        width: 100%;
+    }
+}
