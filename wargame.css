@@ -28,11 +28,13 @@ nav > ul > li {
     display: inline-block;
     list-style: none;
     margin: 0 15px;
+    font-weight: bold;
 }
 
 nav > ul > li.right {
     float: right;
     margin-right: 80px;
+    font-weight: bold;
 
 }
 
