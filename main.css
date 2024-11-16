@@ -125,18 +125,21 @@ article {
         margin: 20px;
     }
     .container .box .message_box .message{
-        font-size: 20px;
+        font-size: 16px;
         margin: 10px 0px;
+        line-height: 1.5;
     }
     .container .box .button_box{
         width: 100%;
         text-align: right;
     }
     .container .box .button_box .close_button{
-        font-size: 18px;
+        font-size: 16px;
         padding: 8px 20px;
         border: none;
         cursor: pointer;
+        color: #fff;
+        background-color: #0d051b;
     }
     .container .box{
         position: absolute;
