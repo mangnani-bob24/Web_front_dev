@@ -18,45 +18,146 @@
         </nav>
     </header>
 
-    <!-- 가운데 정렬된 이미지 추가 -->
+      <!-- 가운데 정렬된 이미지 추가 -->
+    <div class="image-banner">
+        <img src="images/wargame_banner.svg" alt="Center Image" class="banner-image">
+    </div>
     <div class="image-container">
-        <img src="github.png" alt="Center Image" class="center-image">
+        <img src="images/github.png" alt="Center Image" class="center-image">
     </div>
  
     <!-- 깃헙 링크 -->
-    <p><a href="wargame.html">워게임 풀러가기</a></p>
+    <p><a href="wargame.html">워게임 환경구성 바로가기</a></p>
 
-    <!-- 아코디언 -->
-    <div class="accordion">
-        <button class="btbt01">워게임 1</button>
-        <div class="ppp">
-            <h4>내용 1</h4>
-            <p>여기에 첫 번째 아코디언 내용이 표시됩니다.</p>
-        </div>
 
-        <button class="btbt02">워게임 2</button>
-        <div class="ppp">
-            <h4>내용 2</h4>
-            <p>두 번째 아코디언 내용입니다.</p>
-        </div>
-
-        <button class="btbt03">워게임 3</button>
-        <div class="ppp">
-            <h4>내용 3</h4>
-            <p>세 번째 아코디언 내용입니다.</p>
-        </div>
+<!-- 아코디언 -->
+<div class="accordion">
+    <button class="btbt01">API<br>100</button>
+    <div class="ppp">
+        <h4>Insecure interfaces and APIs</h4>
+        <form class="flag-form">
+            <input type="text" id="flag1" name="flag1" placeholder="flag를 입력하세요">
+            <button type="button" class="submit-btn" onclick="checkFlag(1)">제출</button>
+        </form>
+        <p class="feedback" id="feedback1"></p>
     </div>
 
-    <script>
-        // 아코디언 기능 구현
-        const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03');
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-            });
+    <button class="btbt02">VulnSWD<br>150</button>
+    <div class="ppp">
+        <h4>Insecure software development</h4>
+        <form class="flag-form">
+            <input type="text" id="flag2" name="flag2" placeholder="flag를 입력하세요">
+            <button type="button" class="submit-btn" onclick="checkFlag(2)">제출</button>
+        </form>
+        <p class="feedback" id="feedback2"></p>
+    </div>
+
+    <button class="btbt03">워게임 3</button>
+    <div class="ppp">
+        <h4>내용 3</h4>
+        <form class="flag-form">
+            <label for="flag3">Flag 입력:</label>
+            <input type="text" id="flag3" name="flag3" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(3)">제출</button>
+        </form>
+        <p class="feedback" id="feedback3"></p>
+    </div>
+
+    <button class="btbt04">워게임 4</button>
+    <div class="ppp">
+        <h4>내용 4</h4>
+        <form class="flag-form">
+            <label for="flag4">Flag 입력:</label>
+            <input type="text" id="flag4" name="flag4" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(4)">제출</button>
+        </form>
+        <p class="feedback" id="feedback4"></p>
+    </div>
+
+    <button class="btbt05">워게임 5</button>
+    <div class="ppp">
+        <h4>내용 5</h4>
+        <form class="flag-form">
+            <label for="flag5">Flag 입력:</label>
+            <input type="text" id="flag5" name="flag5" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(5)">제출</button>
+        </form>
+        <p class="feedback" id="feedback5"></p>
+    </div>
+
+    <button class="btbt06">워게임 6</button>
+    <div class="ppp">
+        <h4>내용 6</h4>
+        <form class="flag-form">
+            <label for="flag6">Flag 입력:</label>
+            <input type="text" id="flag6" name="flag6" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(6)">제출</button>
+        </form>
+        <p class="feedback" id="feedback6"></p>
+    </div>
+
+    <button class="btbt07">워게임 7</button>
+    <div class="ppp">
+        <h4>내용 7</h4>
+        <form class="flag-form">
+            <label for="flag7">Flag 입력:</label>
+            <input type="text" id="flag7" name="flag7" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(7)">제출</button>
+        </form>
+        <p class="feedback" id="feedback7"></p>
+    </div>
+
+    <button class="btbt08">워게임 8</button>
+    <div class="ppp">
+        <h4>내용 8</h4>
+        <form class="flag-form">
+            <label for="flag8">Flag 입력:</label>
+            <input type="text" id="flag8" name="flag8" placeholder="Enter the flag">
+            <button type="button" class="submit-btn" onclick="checkFlag(8)">제출</button>
+        </form>
+        <p class="feedback" id="feedback8"></p>
+    </div>
+</div>
+
+<script>
+    // 아코디언 기능 구현 (js)
+    const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03, .btbt04, .btbt05, .btbt06, .btbt07, .btbt08');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
         });
-    </script>
+    });
+</script>
+
+<script>
+    // 플래그 값 검증 (js)
+    const flags = {
+        1: "correct_flag1",
+        2: "correct_flag2",
+        3: "correct_flag3",
+        4: "correct_flag4",
+        5: "correct_flag5",
+        6: "correct_flag6",
+        7: "correct_flag7",
+        8: "correct_flag8",
+    };
+
+    function checkFlag(index) {
+        const input = document.getElementById(`flag${index}`);
+        const feedback = document.getElementById(`feedback${index}`);
+        const enteredFlag = input.value.trim();
+
+        if (enteredFlag === flags[index]) {
+            feedback.textContent = "정답입니다!";
+            feedback.style.color = "green";
+        } else {
+            feedback.textContent = "틀렸습니다. 다시 시도하세요.";
+            feedback.style.color = "red";
+        }
+    }
+</script>
+
 
 </body>
 </html>
