@@ -48,6 +48,10 @@ header {
     padding: 30px;
 }
 
+nav a {
+    letter-spacing: normal; /* 자간을 기본값으로 설정 */
+}
+
 nav a:visited,
 nav a:link {
     color: #fff;

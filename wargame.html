@@ -7,45 +7,56 @@
     <link rel="stylesheet" href="wargame.css">
 </head>
 <body>
-    <header> <nav>
-        <ul>
-            <li><a href="introduce.html">팀 소개</a></li>
-            <li><a href="services.html">워게임</a></li>
-            <li><a href="announce.html">홍보 및 소식</a></li>
-            <li class="right"><a href="login.html">로그인</a></li>
-        </ul>
-    </nav></header>
-<!-- 아코디언 -->
-<div class="accordion">
-    <button class="btbt01">워게임 1</button>
-    <div class="ppp">
-        <h4>내용 1</h4>
-        <p>여기에 첫 번째 아코디언 내용이 표시됩니다.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="introduce.html">팀 소개</a></li>
+                <li><a href="services.html">워게임</a></li>
+                <li><a href="announce.html">홍보 및 소식</a></li>
+                <li class="right"><a href="login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 가운데 정렬된 이미지 추가 -->
+    <div class="image-container">
+        <img src="github.png" alt="Center Image" class="center-image">
+    </div>
+ 
+    <!-- 깃헙 링크 -->
+    <p><a href="wargame.html">워게임 풀러가기</a></p>
+
+    <!-- 아코디언 -->
+    <div class="accordion">
+        <button class="btbt01">워게임 1</button>
+        <div class="ppp">
+            <h4>내용 1</h4>
+            <p>여기에 첫 번째 아코디언 내용이 표시됩니다.</p>
+        </div>
+
+        <button class="btbt02">워게임 2</button>
+        <div class="ppp">
+            <h4>내용 2</h4>
+            <p>두 번째 아코디언 내용입니다.</p>
+        </div>
+
+        <button class="btbt03">워게임 3</button>
+        <div class="ppp">
+            <h4>내용 3</h4>
+            <p>세 번째 아코디언 내용입니다.</p>
+        </div>
     </div>
 
-    <button class="btbt02">워게임 2</button>
-    <div class="ppp">
-        <h4>내용 2</h4>
-        <p>두 번째 아코디언 내용입니다.</p>
-    </div>
-
-    <button class="btbt03">워게임 3</button>
-    <div class="ppp">
-        <h4>내용 3</h4>
-        <p>세 번째 아코디언 내용입니다.</p>
-    </div>
-</div>
-
-<script>
-// 아코디언 기능 구현
-const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-    });
-});
-</script>
+    <script>
+        // 아코디언 기능 구현
+        const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>
