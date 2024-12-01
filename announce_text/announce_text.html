@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Docs Slider</title>
+    <link rel="stylesheet" href="announce_text.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="introduce.html">팀 소개</a></li>
+                <li><a href="wargame.html">워게임</a></li>
+                <li><a href="announce.html">홍보 및 소식</a></li>
+                <li class="right"><a href="login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider">
+        <div class="slider-content">
+            <div class="arrow left" onclick="prevSlide()">&#8249;</div>
+            <h1 id="slider-title">Wiki Docs</h1>
+            <div class="arrow right" onclick="nextSlide()">&#8250;</div>
+        </div>
+        <h2 id="slider-date">2024.11.24</h2>
+        <div class="slide">
+            <p id="slider-text">슬라이드 내용이 여기에 표시됩니다.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript 코드 -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            {
+                title: "Wiki Docs",
+                date: "2024.11.24",
+                text: "Wiki Docs에 「금융권 SaaS 활용 생성형 AI 가이드라인」 등재 및 출판 준비 중"
+            },
+            {
+                title: "새로운 슬라이드 제목",
+                date: "2024.12.01",
+                text: "다른 슬라이드 콘텐츠가 여기에 표시될 수 있습니다."
+            },
+            {
+                title: "또 다른 제목",
+                date: "2025.01.10",
+                text: "또 다른 슬라이드 내용을 추가할 수 있습니다."
+            }
+        ];
+
+        function updateSlide() {
+            const titleElement = document.getElementById('slider-title');
+            const dateElement = document.getElementById('slider-date');
+            const textElement = document.getElementById('slider-text');
+
+            titleElement.textContent = slides[currentSlide].title;
+            dateElement.textContent = slides[currentSlide].date;
+            textElement.textContent = slides[currentSlide].text;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateSlide();
+        });
+    </script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@ nav > ul {
     padding: 0;
     margin: 0 auto;
     text-align: center;
-    margin-left: 80px;
+    margin-left: 112px;
 }
 
 nav > ul > li {
@@ -38,11 +38,21 @@ nav > ul > li {
     font-weight: bold;
 }
 
+
 nav > ul > li.right {
+    display: block; /* 아이콘과 텍스트를 수평 정렬 (or flex) */
+    align-items: center; /* 수직 중앙 정렬 */
     float: right;
     margin-right: 80px;
     font-weight: bold;
+}
 
+nav > ul > li.right img.id-icon {
+    width: 20px; /* 아이콘의 가로 크기 */
+    height: 20px; /* 아이콘의 세로 크기 */
+    margin-right: 8px; /* 텍스트와 간격 */
+    margin-bottom: 2px;
+    vertical-align: middle; /* 아이콘과 텍스트의 수직 정렬 */
 }
 
 /* 게시판 소개 이미지 */

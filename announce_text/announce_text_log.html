@@ -6,96 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki Docs Slider</title>
-    <link rel="stylesheet" href="announce_text1.css">
-    <style>
-        * {
-            margin: 0;
-        }
-
-        html,
-        body {
-            height: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: white;
-        }
-
-        header {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #0d051b;
-            padding: 30px;
-            z-index: 10;
-        }
-
-        nav a:visited,
-        nav a:link {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        nav > ul {
-            display: block;
-            padding: 0;
-            margin: 0 auto;
-            text-align: center;
-            margin-left: 80px;
-        }
-
-        nav > ul > li {
-            display: inline-block;
-            list-style: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav > ul > li.right {
-            float: right;
-            margin-right: 80px;
-            font-weight: bold;
-        }
-
-        .slider {
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .slider h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .slider h2 {
-            font-size: 1.2rem;
-            color: #ccc;
-        }
-
-        .slider-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            margin-top: 2rem;
-        }
-
-        .arrow {
-            font-size: 2rem;
-            cursor: pointer;
-            user-select: none;
-            padding: 0 1rem;
-            color: #0d051b;
-        }
-
-        .slide {
-            font-size: 1.2rem;
-            padding: 1rem 2rem;
-            background: rgba(6, 4, 4, 0.1);
-            border-radius: 10px;
-            width: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="announce_text_log.css">
 </head>
 
 <body>
@@ -105,22 +16,19 @@
                 <li><a href="introduce.html">팀 소개</a></li>
                 <li><a href="wargame.html">워게임</a></li>
                 <li><a href="announce.html">홍보 및 소식</a></li>
-                <li class="right"><a href="login.html">로그인</a></li>
+                <li class="right"><a href="login.html"><img src="../images/id_icon.svg" alt="User Icon" class="id-icon">BOB님</a></li>
             </ul>
         </nav>
     </header>
     <div class="slider">
         <div class="slider-content">
             <div class="arrow left" onclick="prevSlide()">&#8249;</div>
-                <h1 id="slider-title">Wiki Docs</h1>
+            <h1 id="slider-title">Wiki Docs</h1>
             <div class="arrow right" onclick="nextSlide()">&#8250;</div>
         </div>
-                <h2 id="slider-date">2024.11.24</h2>
-                <div class="slide">
-                    <p id="slider-text">슬라이드 내용이 여기에 표시됩니다.</p>
-                
-            </div>
-            
+        <h2 id="slider-date">2024.11.24</h2>
+        <div class="slide">
+            <p id="slider-text">슬라이드 내용이 여기에 표시됩니다.</p>
         </div>
     </div>
 
@@ -172,3 +80,5 @@
 </body>
 
 </html>
+
+                
