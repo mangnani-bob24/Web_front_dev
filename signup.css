@@ -120,14 +120,6 @@ main button {
 }
 
 
-footer {
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    margin-right: 80px;
-}
-
 .columns {
     display: flex;
 }
