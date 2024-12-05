@@ -105,6 +105,10 @@ input {
     background-color: #e6e6e6;
 }
 
+.forgot{ /*재가입 권유*/
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    }
 
 main button {
     border: none;

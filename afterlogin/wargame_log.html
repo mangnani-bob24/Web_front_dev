@@ -10,13 +10,24 @@
     <header>
         <nav>
             <ul>
-                <li><a href="introduce.html">팀 소개</a></li>
-                <li><a href="services.html">워게임</a></li>
-                <li><a href="announce.html">홍보 및 소식</a></li>
-                <li class="right"><a href="login.html"><img src="../images/id_icon.svg" alt="User Icon" class="id-icon">BOB님</a></li>
+                <li><a href="main_log.html">팀 소개</a></li>
+                <li><a href="wargame_log.html">워게임</a></li>
+                <li><a href="announce_log.html">홍보 및 소식</a></li>
+                <li class="right"><img src="../images/id_icon.svg" alt="User Icon" class="id-icon" id="userIcon">BOB님</li>
             </ul>
         </nav>
     </header>
+
+    <!-- 메시지 박스 -->
+    <div class="box">
+        <div class="message">
+            <p>BOB님<br>bob@gmail.com</br>현재 점수 ${score}</p>
+            <div class="button_box">
+                <button class="logout_button"><a href="../main.html">로그아웃</a></button>
+                <button class="close_button">닫기</button>
+            </div>
+        </div>
+    </div>
 
       <!-- 가운데 정렬된 이미지 추가 -->
     <div class="image-banner">
@@ -120,10 +131,30 @@
 </div>
 
 <script>
+    // 아이콘 클릭 시 메시지 박스 열기
+    const userIcon = document.getElementById('userIcon');
+    const box = document.querySelector('.box');
+    const closeButton = document.querySelector('.close_button');
+
+    userIcon.addEventListener('click', function() {
+        box.classList.add('box_active');
+    });
+
+    closeButton.addEventListener('click', function() {
+        box.classList.remove('box_active');
+    });
+</script>
+
+<script>
+    // 점수 저장 변수
+    let score = 0;
+
     // 아코디언 기능 구현 (js)
     const buttons = document.querySelectorAll('.btbt01, .btbt02, .btbt03, .btbt04, .btbt05, .btbt06, .btbt07, .btbt08');
     buttons.forEach(button => {
         button.addEventListener('click', function() {
+            if (this.disabled) return;
+
             const content = this.nextElementSibling;
             content.style.display = (content.style.display === 'block') ? 'none' : 'block';
         });
@@ -146,30 +177,37 @@
     function checkFlag(index) {
         const input = document.getElementById(`flag${index}`);
         const feedback = document.getElementById(`feedback${index}`);
+        const button = document.querySelector(`.btbt0${index}`);
         const enteredFlag = input.value.trim();
 
         if (enteredFlag === flags[index]) {
             feedback.textContent = "정답입니다!";
             feedback.style.color = "green";
-        } else {
+
+           /* feedback.textcontent가 먼저 나타나고 이후 동작이 실행되도록 지연처리 */
+            setTimeout(() => {
+
+            // 버튼 비활성화 및 입력 필드 비활성화
+            button.disabled = true;
+            input.disabled = true;
+
+            // 아코디언 내용 비활성화 (다시 열리지 않도록)
+            const content = button.nextElementSibling;
+            content.style.display = 'none';
+
+            // 점수 증가
+            score += (index * 50);  // 각 문제마다 50점씩 증가
+            alert(`현재 점수: ${score}`);  // 점수 알림
+
+                 }, 100); // settimeout으로 100ms 지연
+
+        } 
+        
+        else {
             feedback.textContent = "틀렸습니다. 다시 시도하세요.";
             feedback.style.color = "red";
         }
     }
-        // 요소 선택
-        let box = document.querySelector('.box');
-        let open_button = document.querySelector('.open_button');
-        let close_button = document.querySelector('.close_button');
-
-        // '워게임 배경설명' 버튼 클릭 시 박스 열기
-        open_button.onclick = function () {
-            box.classList.add('box_active');
-        };
-
-        // 'OK' 버튼 클릭 시 박스 닫기
-        close_button.onclick = function () {
-            box.classList.remove('box_active');
-        };
 </script>
 
 

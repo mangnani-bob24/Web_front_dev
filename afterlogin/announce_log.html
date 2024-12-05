@@ -9,12 +9,23 @@
 <body>
     <header> <nav>
         <ul>
-            <li><a href="introduce.html">팀 소개</a></li>
-            <li><a href="wargame.html">워게임</a></li>
-            <li><a href="announce.html">홍보 및 소식</a></li>
-            <li class="right"><a href="login.html"><img src="../images/id_icon.svg" alt="User Icon" class="id-icon">BOB님</a></li>
+            <li><a href="main_log.html">팀 소개</a></li>
+            <li><a href="wargame_log.html">워게임</a></li>
+            <li><a href="announce_log.html">홍보 및 소식</a></li>
+            <li class="right"><img src="../images/id_icon.svg" alt="User Icon" class="id-icon" id="userIcon">BOB님</li>
         </ul>
     </nav></header>
+
+     <!-- 메시지 박스 -->
+     <div class="box">
+        <div class="message">
+            <p>BOB님<br>bob@gmail.com</br>현재 점수 ${score}</p>
+            <div class="button_box">
+                <button class="logout_button"><a href="../main.html">로그아웃</a></button>
+                <button class="close_button">닫기</button>
+            </div>
+        </div>
+    </div>
    
 <!-- 가운데 정렬된 이미지 추가 -->
 <div class="image-banner">
@@ -57,6 +68,21 @@ buttons.forEach(button => {
         content.style.display = (content.style.display === 'block') ? 'none' : 'block';
     });
 });
+</script>
+
+<script>
+    // 아이콘 클릭 시 메시지 박스 열기
+    const userIcon = document.getElementById('userIcon');
+    const box = document.querySelector('.box');
+    const closeButton = document.querySelector('.close_button');
+
+    userIcon.addEventListener('click', function() {
+        box.classList.add('box_active');
+    });
+
+    closeButton.addEventListener('click', function() {
+        box.classList.remove('box_active');
+    });
 </script>
 
 </body>
